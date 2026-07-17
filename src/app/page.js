@@ -5,8 +5,11 @@ import ContactForm from "@/components/contact/ContactForm";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-pink-50/30 text-slate-800 selection:bg-pink-300/50">
-      <main className="max-w-5xl mx-auto px-6 py-12 flex flex-col gap-20">
+    <div className="min-h-screen bg-pink-50/30 text-slate-800 selection:bg-pink-300/50 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 z-[-1] bg-[radial-gradient(#fbcfe8_1px,transparent_1px)] [background-size:24px_24px] opacity-50"></div>
+      
+      <main className="max-w-5xl mx-auto px-6 py-8 flex flex-col gap-20 relative z-10">
         <Hero />
 
         <section id="projects" className="scroll-mt-20">
@@ -31,6 +34,9 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <footer className="w-full text-center py-8 text-slate-500 text-sm">
+      </footer>
     </div>
   );
 }

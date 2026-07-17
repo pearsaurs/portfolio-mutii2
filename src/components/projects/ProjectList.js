@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import ProjectCard from "./ProjectCard";
+import { Search } from "lucide-react";
 
 export default function ProjectList({ projects }) {
   const [query, setQuery] = useState("");
@@ -49,10 +50,12 @@ export default function ProjectList({ projects }) {
       </div>
 
       {filteredProjects.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-16 px-4 bg-slate-50 rounded-xl border border-slate-200">
-          <div className="text-4xl mb-4">🔍</div>
-          <h3 className="text-xl font-semibold text-slate-700 mb-2">o0ops Proyek tidak ditemukan</h3>
-          <p className="text-slate-500 text-center">
+        <div className="flex flex-col items-center justify-center py-16 px-4 bg-slate-50 border-2 border-dashed border-pink-200 rounded-xl">
+          <div className="bg-pink-100 p-4 rounded-full mb-4">
+            <Search className="w-8 h-8 text-pink-500" />
+          </div>
+          <h3 className="text-xl font-semibold text-slate-700 mb-2">Proyek tidak ditemukan</h3>
+          <p className="text-slate-500 text-center max-w-sm">
             Coba sesuaikan pencarian atau filter untuk menemukan apa yang kamu cari.
           </p>
         </div>
