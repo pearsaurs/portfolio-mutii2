@@ -14,7 +14,6 @@ export default function ContactForm() {
     e.preventDefault();
     console.log("Submitted:", { name, email, message });
     setSubmitted(true);
-    // Reset after 3s
     setTimeout(() => {
       setSubmitted(false);
       setName("");
